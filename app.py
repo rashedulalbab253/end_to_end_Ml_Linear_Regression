@@ -24,25 +24,31 @@ class HouseData(BaseModel):
 
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
+    """
+    Renders the home page of the House Price Prediction app.
+    """
     return templates.TemplateResponse("home.html", {"request": request})
 
 @app.post("/predict_api")
 def predict_api(house_data: HouseData):
+    """
+    API endpoint for making predictions using JSON input.
+    Returns: JSON response with the predicted price.
+    """
     data = house_data.data
-    print(data)
     input_array = np.array(list(data.values())).reshape(1, -1)
-    print(input_array)
     new_data = scalar.transform(input_array)
     output = regmodel.predict(new_data)
-    print(output[0])
     return {"prediction": float(output[0])}
 
 @app.post("/predict", response_class=HTMLResponse)
 async def predict(request: Request):
+    """
+    Web endpoint that accepts form data and renders the prediction result on the home page.
+    """
     form_data = await request.form()
     data = [float(x) for x in form_data.values()]
     final_input = scalar.transform(np.array(data).reshape(1, -1))
-    print(final_input)
     output = regmodel.predict(final_input)[0]
     formatted_output = "${:,.2f}".format(output * 100000)
     return templates.TemplateResponse(

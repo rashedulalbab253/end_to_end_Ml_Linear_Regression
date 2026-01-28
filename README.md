@@ -1,4 +1,4 @@
-# House Price Prediction
+# End to end Linear regression Project
 
 This project implements a linear regression model to predict house prices based on various features. The model is trained using the provided dataset and can be used to make predictions on new data.
 
@@ -15,30 +15,29 @@ This project implements a linear regression model to predict house prices based 
 
 ## Live Demo
 
-The application is deployed on Heroku and can be accessed at:
-[https://california-house-price-predict-04f87fa9ec9a.herokuapp.com](https://california-house-price-predict-04f87fa9ec9a.herokuapp.com)
+The application can be containerized using Docker for easy deployment.
 
 ## Local Setup
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/Enamul16012001/HousePricePrediction.git
-cd HousePricePrediction
+git clone https://github.com/rashedulalbab253/end_to_end_Ml_Linear_Regression.git
+cd end_to_end_Ml_Linear_Regression
 ```
 
 Create a virtual environment:
 
 **Windows:**
 ```bash
-python -m venv .venv
-.venv\Scripts\activate
+python -m venv env
+env/scripts/activate
 ```
 
 **macOS/Linux:**
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
+python3 -m venv env
+source env/bin/activate
 ```
 
 Install Dependencies:
@@ -74,7 +73,7 @@ python3 train.py
 Build the Docker image using the Dockerfile provided in the repository:
 
 ```bash
-docker build -t house-price-prediction .
+docker build -t end-to-end-ml-linear-regression .
 ```
 
 ### Running the Docker Container
@@ -82,7 +81,7 @@ docker build -t house-price-prediction .
 Run the Docker container with:
 
 ```bash
-docker run -p 8000:8000 house-price-prediction
+docker run -p 8000:8000 end-to-end-ml-linear-regression
 ```
 
 This will:
@@ -97,7 +96,7 @@ This will:
 Pull the pre-built Docker image from DockerHub:
 
 ```bash
-docker pull enamulatiq/house-price-prediction:latest
+docker pull rashedulalbab253/house-price-prediction:latest
 ```
 
 ### Running the Container
@@ -105,5 +104,5 @@ docker pull enamulatiq/house-price-prediction:latest
 Run the container from the DockerHub image:
 
 ```bash
-docker run -p 8000:8000 enamulatiq/house-price-prediction
+docker run -p 8000:8000 rashedulalbab253/house-price-prediction
 ```

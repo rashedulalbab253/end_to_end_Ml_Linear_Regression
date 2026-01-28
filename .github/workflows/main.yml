@@ -22,4 +22,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: rashedulalbab1234/end-to-end-ml-linear-regression:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/end-to-end-ml-linear-regression:latest

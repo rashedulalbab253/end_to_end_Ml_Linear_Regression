@@ -96,7 +96,7 @@ This will:
 Pull the pre-built Docker image from DockerHub:
 
 ```bash
-docker pull rashedulalbab253/end-to-end-ml-linear-regression:latest
+docker pull rashedulalbab1234/end-to-end-ml-linear-regression:latest
 ```
 
 ### Running the Container
@@ -104,5 +104,5 @@ docker pull rashedulalbab253/end-to-end-ml-linear-regression:latest
 Run the container from the DockerHub image:
 
 ```bash
-docker run -p 8000:8000 rashedulalbab253/end-to-end-ml-linear-regression
+docker run -p 8000:8000 rashedulalbab1234/end-to-end-ml-linear-regression
 ```

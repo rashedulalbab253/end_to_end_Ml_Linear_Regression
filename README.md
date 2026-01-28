@@ -1,5 +1,9 @@
 # End to end Linear regression Project
 
+![Build Status](https://github.com/rashedulalbab253/end_to_end_Ml_Linear_Regression/actions/workflows/main.yml/badge.svg)
+![Docker Hub](https://img.shields.io/docker/v/rashedulalbab1234/end-to-end-ml-linear-regression?label=Docker%20Hub)
+![Python Version](https://img.shields.io/badge/python-3.12-blue.svg)
+
 This project implements a linear regression model to predict house prices based on various features. The model is trained using the provided dataset and can be used to make predictions on new data.
 
 ## Table of Contents
